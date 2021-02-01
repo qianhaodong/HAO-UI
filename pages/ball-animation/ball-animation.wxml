@@ -1,0 +1,23 @@
+<page-tips
+  title="Ball-Animation"
+  desc="小球动画"
+></page-tips>
+
+<view class="animate-box" catch:tap="handleAnimate">
+  <view class="content">动画</view>
+  <view class="footer">购物车</view>
+</view>
+
+<!-- 小球 -->
+<view class="ball-container">
+  <block wx:for="{{balls}}" wx:key="index">
+    <view
+      class="ball {{item.show ? 'ball-show' : ''}}"
+      style="{{item.ballStyle || ''}}"
+      bind:transitionend="ballTransitionend"
+      data-index="{{index}}"
+    >
+      <view class="ball-inner {{item.show ? 'ball-inner-show' : ''}}" style="{{item.ballInnerStyle || ''}}"></view>
+    </view>
+  </block>
+</view>

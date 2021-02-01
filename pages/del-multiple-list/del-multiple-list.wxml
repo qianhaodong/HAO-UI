@@ -1,0 +1,12 @@
+<page-tips
+  title="Del-Multiple-list"
+  desc="多选删除列表，支持长按选择删除，点击 “去体验” 查看完整示例。"
+>
+  <button
+    type="primary"
+    size="mini"
+    catch:tap="click"
+  >
+    去体验
+  </button>
+</page-tips>

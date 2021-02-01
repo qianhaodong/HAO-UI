@@ -1,0 +1,34 @@
+<view class="upload-img">
+  <view class="img-list">
+    <!-- 拖拽图片列表 -->
+    <drag
+      id="drag"
+      columns="{{3}}"
+      _list-data="{{imgList}}"
+      _page-scroll-top="{{pageScrollTop}}"
+      catch:change="change"
+      catch:click="handleItemClick"
+      catch:long-press="handleLongpress"
+    >
+      <block wx:for="{{imgList}}" wx:key="index">
+        <view
+          slot="{{'multiple' + index}}"
+          class="drag-item"
+        >
+          <image class="image" src="{{item.src}}"></image>
+          <block wx:if="{{!item.fixed && progressList[index] !== 100 && upload}}">
+            <view class="img-mask">{{progressList[index] || 0}}%</view>
+          </block>
+          <view
+            class="del"
+            wx:if="{{!item.fixed && delShow}}"
+            catch:tap="handleDelete"
+            data-index="{{index}}"
+          >
+            <image class="del-icon" src="/assets/images/del-icon.png"></image>
+          </view>
+        </view>
+      </block>
+    </drag>
+  </view>
+</view>

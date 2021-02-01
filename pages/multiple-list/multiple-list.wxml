@@ -1,0 +1,12 @@
+<page-tips
+  title="多选列表"
+  desc="自定义多选列表，可选择单个或多个选项，点击 “去体验” 查看完整示例。"
+>
+  <button
+    type="primary"
+    size="mini"
+    catch:tap="click"
+  >
+    去体验
+  </button>
+</page-tips>

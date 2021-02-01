@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "多选删除列表",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index"
+  }
+}

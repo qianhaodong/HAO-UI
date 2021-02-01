@@ -1,0 +1,33 @@
+<view class="index-header">
+  <image class="logo" src="/assets/images/logo.png"></image>
+  <view class="tips">HAO UI 是一款提供高质量交互的小程序组件合集，致力于简洁和高可用的组件实现。</view>
+</view>
+
+<view class="index-content">
+  <block wx:for="{{list}}" wx:key="index">
+    <view class="item">
+      <view
+        class="item-hd"
+        style="{{item.open ? 'opacity: 0.7;' : ''}}"
+        hover-class="item-hover"
+        catch:tap="handleItemClick"
+        data-index="{{index}}"
+      >
+        <view class="name">{{item.name}}</view>
+        <image class="icon" src="{{item.icon}}"></image>
+      </view>
+      <view class="drop-menu {{item.open ? 'drop-menu-show' : ''}}">
+        <view class="drop-box {{item.open ? 'drop-box-show' : ''}}">
+          <block
+            wx:for="{{item.comps}}"
+            wx:for-item="compItem"
+            wx:for-index="compIndex"
+            wx:key="compIndex"
+          >
+            <navigator url="{{compItem.page}}" class="drop-menu-item">{{compItem.name}}</navigator>
+          </block>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "多选删除列表",
+  "usingComponents": {
+    "multiple-list": "/components/multiple-list/index",
+    "action-sheet": "/components/action-sheet/index"
+  }
+}

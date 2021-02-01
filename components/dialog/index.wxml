@@ -1,0 +1,29 @@
+<view
+  class="pop-mask {{visible ? 'pop-mask-show' : ''}}"
+  catch:tap="handleMaskClick"
+  catch:touchmove="stopTouchMove"
+></view>
+<view class="pop-content sq-class {{visible ? 'pop-content-show' : ''}}">
+  <block wx:if="{{visible}}">
+    <view class="pop-title">
+      <slot name="pop-title"></slot>
+    </view>
+    <view class="pop-custom">
+      <slot name="pop-content"></slot>
+    </view>
+    <slot wx:if="{{customBtns}}" name="pop-btns"></slot>
+    <view wx:else class="pop-btns {{actionBtns.length === 1 ? 'no-line' : ''}}">
+      <block wx:for="{{actionBtns}}" wx:key="index">
+        <view
+          class="btn"
+          hover-class="btn-hover"
+          catch:tap="handleBtnClick"
+          data-type="{{item.type}}"
+          style="{{item.color ? 'color: ' + item.color : ''}}"
+        >
+          {{item.txt}}
+        </view>
+      </block>
+    </view>
+  </block>
+</view>

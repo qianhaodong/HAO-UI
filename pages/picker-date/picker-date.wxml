@@ -1,0 +1,13 @@
+<page-tips
+  title="日期筛选"
+  desc="仿支付宝账单筛选日期组件，支持按日/按月选择"
+></page-tips>
+
+<view class="picker-date" hover-class="btn-hover" catch:tap="chooseDate">选择日期</view>
+<view class="date">{{date.content}}</view>
+
+<!-- 日期选择组件 -->
+<picker-date
+  id="picker-date"
+  catch:picker-date-done="pickerDateDone"
+></picker-date>

@@ -1,0 +1,31 @@
+<view
+  class="q-dm-mask {{ visible ? 'q-dm-mask-show' : '' }}"
+  catch:tap="handleMaskClick"
+  catch:touchmove="stopTouchMove"
+></view>
+<view class="q-dm q-md-class">
+  <view
+    class="q-dm-header"
+    style="{{ !visible ? 'color: #3b9cff;' : '' }}"
+    catch:tap="handleToggleClick"
+  >
+    <text>{{ dropList[currentIndex].name }}</text>
+    <view class="{{ visible ? 'q-dm-arrow-down' : 'q-dm-arrow-up' }}"></view>
+  </view>
+  <view class="q-dm-menu" style="height: {{ !visible && tsEnd ? '0' : 'auto' }};">
+    <view
+      class="'q-dm-scroll {{ visible ? 'q-dm-scroll-show' : '' }}"
+      bind:transitionend="scrollTransitionend"
+    >
+      <block wx:for="{{ dropList }}" wx:key="index">
+        <view
+          class="q-dm-menu-item {{ currentIndex === index ? 'active' : '' }}"
+          catch:tap="handleItemClick"
+          data-index="{{ index }}"
+        >
+          {{ item.name }}
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

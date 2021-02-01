@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "multiple-item": "/components/multiple-list/multiple-item/index"
+  }
+}

@@ -1,0 +1,119 @@
+.btn {
+  display: table;
+  margin: 0 auto 60rpx;
+  padding: 10rpx 40rpx;
+  background-color: #f1f1f1;
+  color: #333;
+  text-align: center;
+  border-radius: 4rpx;
+}
+
+.btn-hover {
+  background-color: #eee;
+}
+
+/* 弹窗一样式 */
+
+.pop-content {
+  padding: 20rpx 58rpx 48rpx;
+  line-height: 42rpx;
+  font-size: 30rpx;
+  color: #666;
+}
+
+.txt-blue {
+  color: #3b9cff;
+}
+
+/* 弹窗二样式 */
+
+.pop-choose-content {
+  padding: 30rpx 40rpx;
+  font-size: 30rpx;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  line-height: 72rpx;
+  color: #666;
+}
+
+.type {
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+  line-height: 48rpx;
+}
+
+.type .circle {
+  width: 26rpx;
+  height: 26rpx;
+  border-radius: 50%;
+  border: 2rpx solid #999;
+}
+
+.type.active .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #3b9cff;
+}
+
+.type.active .circle::after {
+  content: '';
+  width: 18rpx;
+  height: 18rpx;
+  background-color: #3b9cff;
+  border-radius: 50%;
+}
+
+/* 授权提示弹窗 */
+
+.sq-class {
+  align-items: center;
+  padding-bottom: 48rpx;
+  width: 74% !important;
+}
+
+.pop-SQ-title {
+  margin-bottom: 20rpx;
+}
+
+.pop-SQ-content {
+  line-height: 48rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+
+.pop-SQ-content .tips-icon {
+  margin-top: 20rpx;
+  width: 560rpx;
+  height: 362rpx;
+}
+
+.pop-SQ-btns {
+  width: 100%;
+}
+
+.pop-SQ-btn {
+  width: 60%;
+  height: 65rpx;
+  font-size: 30rpx;
+  background: #3b9cff;
+  border-radius: 30rpx;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-top: 20rpx;
+}
+
+.pop-SQ-btn::after {
+  border: none;
+}
+
+.pop-SQ-hover {
+  background-color: #56a9fe;
+}

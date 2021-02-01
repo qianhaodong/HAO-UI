@@ -1,0 +1,69 @@
+<page-tips
+  title="Dialog"
+  desc="对话弹窗，从页面中间弹出，实现自定义功能弹窗"
+></page-tips>
+
+<!-- 弹窗一 -->
+
+<view class="btn" hover-class="btn-hover" catch:tap="show" data-id="1">弹窗一</view>
+
+<dialog id="dialog1" action-btns="{{actionbtns1}}">
+  <view slot="pop-title">标题</view>
+  <view slot="pop-content" class="pop-content">
+    <view>自定义内容</view>
+    <view>如有疑问请拨打 <text class="txt-blue" selectable="true" catch:tap="phoneCallTap">10086</text></view>
+  </view>
+</dialog>
+
+<!-- 弹窗二 -->
+
+<view class="btn" hover-class="btn-hover" catch:tap="show" data-id="2">弹窗二</view>
+
+<dialog id="dialog2">
+  <view slot="pop-title">请选择选项</view>
+  <view slot="pop-content" class="pop-choose-content">
+    <block wx:for="{{popChooseList}}" wx:key="index">
+      <view
+        class="item"
+        catch:tap="handleItemClick"
+        data-index="{{index}}"
+      >
+        <view class="type {{item.checked ? 'active' : ''}}">
+          <text class="circle"></text>
+        </view>
+        <text>{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</dialog>
+
+<!-- 弹窗三 -->
+
+<view class="btn" hover-class="btn-hover" catch:tap="show" data-id="3">获取信息</view>
+
+<dialog
+  id="dialog3"
+  custom-btns
+  sq-class="sq-class"
+>
+  <view class="pop-SQ-title" slot="pop-title">需要您的授权</view>
+  <view class="pop-SQ-content" slot="pop-content">
+    <view class="tips">为了提供更好的服务</view>
+    <view class="tips">请在稍后的提示框中点击“允许”</view>
+    <image class="tips-icon" src="/assets/images/authorize.png"></image>
+  </view>
+  <view
+    class="pop-SQ-btns"
+    slot="pop-btns"
+  >
+    <button
+      class="pop-SQ-btn"
+      hover-class="pop-SQ-hover"
+      open-type="getUserInfo"
+      bindgetuserinfo="getUserInfo"
+      catch:tap="handleBtnClick"
+    >
+      我知道了
+    </button>
+  </view>
+</dialog>

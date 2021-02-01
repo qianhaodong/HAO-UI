@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "商品排序示例",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "drag": "/components/drag/index"
+  }
+}

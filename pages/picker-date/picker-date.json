@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "日期筛选",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index",
+    "picker-date": "/components/picker-date/index"
+  }
+}

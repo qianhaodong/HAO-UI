@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "图片上传",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index",
+    "upload-img": "/components/upload-img/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "多选列表",
+  "usingComponents": {
+    "multiple-list": "/components/multiple-list/index"
+  }
+}

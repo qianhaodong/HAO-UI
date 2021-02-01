@@ -1,0 +1,19 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item-hover {
+  background-color: #eee;
+}
+
+.icon {
+  padding-right: 30rpx;
+  width: 16px;
+  height: 16px;
+}
+
+.item-content {
+  flex: 1;
+}

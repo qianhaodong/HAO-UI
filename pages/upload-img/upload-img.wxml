@@ -1,0 +1,28 @@
+<page-tips
+  title="Upload-Img"
+  desc="图片上传，点击图片进入预览模式，长按可排序或删除图片"
+></page-tips>
+
+<view class="upload-wrap">
+  <text>请选择图片上传</text>
+  <view class="img-wrap">
+    <!-- 图片上传组件 -->
+    <upload-img
+      _count="{{count}}"
+      img-list="{{imgList}}"
+      upload="{{uploadImgStart}}"
+      page-scroll-top="{{pageScrollTop}}"
+      catch:choose-img-done="chooseImgDone"
+      catch:upload-img-done="uploadImgDone"
+    ></upload-img>
+  </view>
+</view>
+
+<button
+  class="submit-btn"
+  type="primary"
+  disabled="{{uploadDoneFlag}}"
+  catch:tap="submitClick"
+>
+  {{uploadDoneFlag ? '上传完成' : '上传'}}
+</button>

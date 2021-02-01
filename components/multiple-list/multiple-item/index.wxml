@@ -1,0 +1,19 @@
+<view
+  class="item multiple-item-class"
+  hover-class="item-hover"
+  catch:tap="selectItemTap"
+>
+  <!-- 按钮 -->
+  <icon
+    wx:if="{{radioShow}}"
+    class="icon"
+    size="16"
+    type="{{item.checked ? 'success' : 'circle'}}"
+    color="{{item.checked ? '#3b9cff' : ''}}"
+  ></icon>
+  <!-- 自定义 -->
+  <view class="item-content">
+    <slot wx:if="{{custom}}"></slot>
+    <view wx:else>{{item.name}}</view>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "drop-menu",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index",
+    "drop-menu": "/components/drop-menu/index"
+  }
+}

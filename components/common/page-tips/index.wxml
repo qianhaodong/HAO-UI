@@ -1,0 +1,8 @@
+<view class="page-tips">
+  <view class="title">{{title}}</view>
+  <view class="desc">{{desc}}</view>
+</view>
+
+<view class="next-btn">
+  <slot></slot>
+</view>

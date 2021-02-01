@@ -1,0 +1,45 @@
+<view class="list" style="{{radioShow ? 'padding-bottom: 120rpx;' : ''}}">
+  <block wx:for="{{localList}}" wx:key="index">
+    <multiple-item 
+      multiple-item-class="multiple-list-class"
+      item="{{item}}"
+      checked="{{item.checked}}"
+      custom="{{custom}}"
+      radio-show="{{radioShow}}"
+      catch:select-item-tap="selectItemTap"
+      data-index="{{index}}"
+    >
+      <block wx:if="{{custom}}">
+        <slot name="{{'multiple-item' + index}}"></slot>
+      </block>
+    </multiple-item>
+  </block>
+</view>
+
+<!-- 底部操作 -->
+<view class="footer" wx:if="{{radioShow}}">
+  <view class="operate">
+    <view class="operate-all" catch:tap="selectAllTap">
+      <icon
+        class="icon"
+        size="16"
+        type="{{checkAllFlag ? 'success' : 'circle'}}"
+        color="{{checkAllFlag ? '#3b9cff' : ''}}"
+      ></icon>
+      <text>全选</text>
+    </view>
+    <view class="operate-info">
+      <block wx:for="{{operateBtns}}" wx:key="index">
+        <view
+          class="operate-btn {{item.type ? item.type : ''}}"
+          hover-class="operate-hover"
+          catch:tap="handleBtnClick"
+          data-index="{{index}}"
+        >
+          {{item.name}}
+          <block wx:if="{{multipleNumber && item.type === 'confirm'}}">({{multipleNumber}})</block>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

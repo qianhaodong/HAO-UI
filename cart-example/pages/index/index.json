@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "商品购物车示例",
+  "usingComponents": {
+    "cart": "/cart-example/components/cart/cart",
+    "number-QR": "/cart-example/components/number/number",
+    "spec-pop": "/cart-example/components/spec-pop/index"
+  }
+}

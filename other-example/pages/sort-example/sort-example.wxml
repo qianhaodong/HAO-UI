@@ -1,0 +1,82 @@
+<block wx:if="{{categroyMenu.length}}">
+  <view class="commodity">
+    <view class="categroy-menu">
+      <scroll-view
+        class="scroll-view"
+        scroll-y
+        scroll-with-animation
+        scroll-top="{{navScrollTop}}"
+      >
+        <block wx:for="{{categroyMenu}}" wx:key="index">
+          <view
+            class="menu-item {{categroyMenuIndex === index ? 'active' : ''}}"
+            catch:tap="categroyMenuTap"
+            data-index="{{index}}"
+            data-foods-type-id="{{item.ft_id}}"
+          >
+            <view class="txt">
+              <text class="name">{{item.ft_name}}</text>
+              <view class="must" wx:if="{{item.ft_must_choose == 1}}">必选</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class="categroy-content">
+      <view
+        class="sales-sort-btn"
+        hover-class="sort-hover"
+        catch:tap="handleSalesSort"
+      >
+        按销量排序
+      </view>
+      <scroll-view
+        class="scroll-view"
+        scroll-y
+        scroll-top="{{pageScrollTop}}"
+        bindscroll="sortContentScroll"
+      >
+        <drag
+          id="drag"
+          drag-class="drag-class"
+          columns="{{1}}"
+          _list-data="{{goodsList}}"
+          _scroll-view-top="{{scrollViewTop}}"
+          catch:change="change"
+        >
+          <block wx:for="{{goodsList}}" wx:key="index">
+            <view slot="{{'single' + index}}" class="content-item">
+              <view class="item-info">
+                <view class="item-info-right">
+                  <text class="s-name">{{item.f_name}}</text>
+                  <view class="num">
+                    <text class="sale">月售 {{item.salesVolumeInMonth}}</text>
+                    <text class="stock">库存 {{item.stock}}</text>
+                  </view>
+                  <view class="money">￥<text class="big">{{item.localPrice}}</text></view>
+                </view>
+                <view class="sort-operate">
+                  <image
+                    class="sort-top"
+                    src="/other-example/common/images/sort-top-icon.png"
+                    catch:tap="handleTopclick"
+                    data-index="{{index}}"
+                  ></image>
+                  <image class="sort-line" src="/other-example/common/images/sort-line-icon.png"></image>
+                </view>
+              </view>
+            </view>
+          </block>
+        </drag>
+      </scroll-view>
+    </view>
+  </view>
+  
+  <view
+    class="confirm"
+    hover-class="confirm-hover"
+    catch:tap="confirm"
+  >
+    完成
+  </view>
+</block>

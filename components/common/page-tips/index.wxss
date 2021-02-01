@@ -1,0 +1,19 @@
+.page-tips {
+  padding: 80rpx;
+  margin-bottom: 80rpx;
+  text-align: left;
+}
+
+.title {
+  font-size: 40rpx;
+}
+
+.desc {
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.next-btn {
+  text-align: center;
+}

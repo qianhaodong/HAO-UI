@@ -1,0 +1,25 @@
+page {
+  padding-bottom: 120rpx;
+}
+
+.drag-box {
+  padding-bottom: 120rpx;
+}
+
+.drag-item {
+  line-height: 130rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  line-height: 120rpx;
+  text-align: center;
+  background-color: #e1e1e1;
+  z-index: 10;
+}

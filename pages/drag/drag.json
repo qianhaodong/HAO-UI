@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "拖拽",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index",
+    "drag": "/components/drag/index"
+  }
+}

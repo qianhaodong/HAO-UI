@@ -1,0 +1,11 @@
+.upload-wrap {
+  padding: 30rpx;
+}
+
+.img-wrap {
+  margin-top: 20rpx;
+}
+
+.submit-btn {
+  margin: 100rpx 30rpx 40rpx;
+}

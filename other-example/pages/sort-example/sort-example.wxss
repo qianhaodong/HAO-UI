@@ -1,0 +1,256 @@
+/* 隐藏滚动跳 */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.commodity {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 100rpx);
+  padding-bottom: 100rpx;
+  word-break: break-all;
+}
+
+.categroy-menu {
+  width: 166rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #707070;
+  background-color: #f1f1f1;
+}
+
+.scroll-view {
+  height: 100%;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 96rpx;
+  line-height: 36rpx;
+}
+
+.menu-item .txt {
+  position: relative;
+  padding: 10rpx 0 10rpx 28rpx;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.menu-item .txt .name {
+  max-width: 132rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-align: left;
+}
+
+.menu-item .txt .must {
+  margin-top: 4rpx;
+  padding: 0 8rpx;
+  line-height: 28rpx;
+  font-size: 22rpx;
+  border: 1rpx solid #d1d1d1;
+  border-radius: 6rpx;
+  color: #999;
+  font-weight: normal;
+}
+
+.menu-item.active {
+  background-color: #fff;
+}
+
+.menu-item.active .txt {
+  color: #333;
+  font-weight: bold;
+}
+
+.menu-item.active .txt::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -18rpx;
+  width: 3px;
+  height: 36rpx;
+  background-color: #000;
+}
+
+.menu-item .number {
+  position: absolute;
+  right: 2rpx;
+  top: 12rpx;
+  font-size: 20rpx;
+  color: #fff;
+  min-width: 30rpx;
+  background-color: #f55;
+  line-height: 30rpx;
+  text-align: center;
+  border-radius: 50rpx;
+}
+
+.categroy-content {
+  flex: 1;
+  position: relative;
+  padding: 96rpx 30rpx 0;
+}
+
+.content-item {
+  padding: 20rpx 0;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.item-info {
+  position: relative;
+  display: flex;
+}
+
+.item-info .item-info-left {
+  position: relative;
+  margin-right: 20rpx;
+  width: 132rpx;
+  height: 132rpx;
+}
+
+.item-info .item-info-left image {
+  width: 132rpx;
+  height: 132rpx;
+}
+
+.item-info .item-info-left .stop-tips {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 30rpx;
+  color: #333;
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.item-info .item-info-right {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.item-info-right .s-name {
+  position: relative;
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  color: #333;
+  width: 420rpx;
+  line-height: 34rpx;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.item-info-right .num {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  line-height: 100%;
+  color: #999;
+}
+
+.item-info-right .num .stock {
+  margin-left: 24rpx;
+}
+
+.item-info-right .money {
+  font-size: 24rpx;
+  color: #ff4247;
+  line-height: 48rpx;
+  margin-top: 20rpx;
+  font-weight: bold;
+}
+
+.item-info-right .money text {
+  font-size: 32rpx;
+}
+
+.item-info .sort-operate {
+  display: flex;
+  align-items: center;
+}
+
+.item-info .sort-operate .sort-top {
+  padding: 10rpx 30rpx 10rpx 0;
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.item-info .sort-operate .sort-line {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.drag-class::before {
+  content: '置顶 拖动';
+  position: absolute;
+  top: 20rpx;
+  right: 0;
+  line-height: 34rpx;
+  color: #999;
+  font-size: 24rpx;
+  z-index: 3;
+}
+
+.sales-sort-btn {
+  position: absolute;
+  top: 0;
+  left: 30rpx;
+  right: 30rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border: 1px solid #b6b6b6;
+  border-radius: 80rpx;
+  text-align: center;
+}
+
+.sort-hover {
+  background-color: #f1f1f1;
+}
+
+.confirm {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  color: #3b9cff;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  text-align: center;
+  z-index: 100;
+}
+
+.confirm::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 0 solid #ddd;
+  border-top-width: 1px;
+}
+
+.confirm-hover {
+  background-color: #eee;
+}

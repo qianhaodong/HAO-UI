@@ -1,0 +1,41 @@
+<view
+  class="q-as-mask {{ visible ? 'q-as-mask-show' : '' }}"
+  catch:tap="handleMaskClick"
+  catch:touchmove="stopTouchMove"
+></view>
+<view
+  class="q-as q-as-class {{ visible ? 'q-as-show' : '' }}"
+  style="{{ borderRadius ? 'border-radius: 16rpx 16rpx 0 0; overflow: hidden;' : '' }}"
+>
+  <!-- 顶部提示 -->
+  <view class="q-as-header">
+    <slot name="header"></slot>
+  </view>
+  <!-- 选项 -->
+  <view class="q-as-actions">
+    <slot name="content" wx:if="{{custom}}"></slot>
+    <block wx:else>
+      <view
+        class="q-as-action-item"
+        hover-class="click-hover"
+        wx:for="{{ actions }}"
+        wx:key="index"
+        catch:tap="handleItemClick"
+        data-index="{{ index }}"
+      >
+        <!-- 加载动画 -->
+        <view class="q-as-btn-loading" wx:if="{{ item.loading }}"></view>
+        <view class="q-as-btn-text" style="{{ item.color ? 'color: ' + item.color : '' }}">{{ item.name }}</view>
+      </view>
+    </block>
+  </view>
+  <!-- 取消 -->
+  <view
+    wx:if="{{ showCancel }}"
+    class="q-as-cancel"
+    hover-class="click-hover"
+    catch:tap="handleCancelClick"
+  >
+    {{ cancelText }}
+  </view>
+</view>

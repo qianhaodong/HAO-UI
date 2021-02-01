@@ -1,0 +1,42 @@
+<page-tips
+  title="Action-Sheet"
+  desc="操作菜单，从页面底部弹出，支持自定义内容"
+></page-tips>
+
+<!-- 默认选项 -->
+
+<view class="btn" hover-class="btn-hover" catch:tap="show" data-id="1">弹窗一</view>
+
+<action-sheet
+  id="action-sheet1"
+  show-cancel
+  catch:click="handleItemClick"
+  data-id="1"
+></action-sheet>
+
+<!-- 自定义选项 -->
+
+<view class="btn" hover-class="btn-hover" catch:tap="show" data-id="2">弹窗二</view>
+
+<action-sheet
+  id="action-sheet2"
+  show-cancel
+  border-radius
+  actions="{{ actions1 }}"
+  catch:click="handleItemClick"
+  data-id="2"
+></action-sheet>
+
+<!-- 自定义内容 -->
+
+<view class="btn" hover-class="btn-hover" catch:tap="show" data-id="3">自定义</view>
+
+<action-sheet
+  id="action-sheet3"
+  custom
+  catch:click="handleItemClick"
+  data-id="3"
+>
+  <view slot="header" class="title">标题</view>
+  <view slot="content" class="content">自定义内容</view>
+</action-sheet>

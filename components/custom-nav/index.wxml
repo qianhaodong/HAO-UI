@@ -1,0 +1,13 @@
+<cover-view
+  class="custom-nav {{showBorder ? 'border-b' : ''}}"
+  style="height: {{ navBarHeight }}px; padding-top: {{ statusBarHeight }}px;"
+>
+  <cover-view
+    class="custom-nav-icon"
+    hover-class="nav-hover"
+    catch:tap="back"
+  >
+    <cover-image class="custom-nav-img" src="{{ backIcon }}"></cover-image>
+  </cover-view>
+  <cover-view class="custom-title">{{navTitle}}</cover-view>
+</cover-view>

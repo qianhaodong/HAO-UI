@@ -1,0 +1,26 @@
+.drag-wrap {
+  position: relative;
+}
+
+.item {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
+.item.zIndex {
+  z-index: 2;
+}
+
+.item.fixed {
+  z-index: 0;
+}
+
+.item.transition {
+  transition: transform 0.3s;
+}
+
+.multiple {
+  position: relative;
+  padding-top: 100%;
+}

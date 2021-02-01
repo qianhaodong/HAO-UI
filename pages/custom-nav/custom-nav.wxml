@@ -1,0 +1,13 @@
+<!-- 自定义导航栏 -->
+<custom-nav
+  nav-title="自定义导航栏"
+  catch:back="back"
+  catch:height="getNavBarHeight"
+></custom-nav>
+
+<view class="page" style="padding-top: {{ navBarHeight }}px;">
+  <page-tips
+    title="自定义导航栏"
+    desc="小程序不支持返回劫持，通过自定义导航栏，可以实现返回劫持功能"
+  ></page-tips>
+</view>

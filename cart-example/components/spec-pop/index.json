@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "number-QR": "/cart-example/components/number/number"
+  }
+}

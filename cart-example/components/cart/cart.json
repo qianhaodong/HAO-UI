@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "number": "/cart-example/components/number/number"
+  }
+}

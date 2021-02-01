@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "小球动画",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index"
+  }
+}

@@ -1,0 +1,11 @@
+<page-tips
+  title="Drop-Menu"
+  desc="下拉菜单弹窗，固定在顶部，可自定义菜单选项"
+></page-tips>
+
+<!-- 顶部下拉组件 -->
+<drop-menu
+  maskClosable
+  drop-list="{{ dropList }}"
+  catch:click="handleItemClick"
+></drop-menu>

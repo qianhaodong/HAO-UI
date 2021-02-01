@@ -1,0 +1,38 @@
+.custom-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  z-index: 999;
+}
+
+.custom-nav.border-b {
+  border-bottom: 1rpx solid #f1f1f1;
+}
+
+.custom-nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+}
+
+.nav-hover {
+  background-color: #eee;
+}
+
+.custom-nav-img {
+  width: 20px;
+  height: 20px;
+}
+
+.custom-title {
+  line-height: 40rpx;
+}

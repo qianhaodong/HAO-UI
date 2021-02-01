@@ -1,0 +1,26 @@
+<page-tips
+  title="Drag"
+  desc="拖拽，长按进入拖拽模式"
+></page-tips>
+
+<view class="drag-box">
+  <drag
+    columns="{{1}}"
+    _list-data="{{list}}"
+    _bottom-height="{{120}}"
+    catch:click="handleItemClick"
+    catch:change="change"
+  >
+    <block wx:for="{{list}}" wx:key="index">
+      <view
+        slot="{{'single' + index}}"
+        class="drag-item"
+        style="{{item.color ? 'background-color: ' + item.color : ''}}"
+      >
+        {{item.color}}
+      </view>
+    </block>
+  </drag>
+</view>
+
+<view class="footer">footer</view>

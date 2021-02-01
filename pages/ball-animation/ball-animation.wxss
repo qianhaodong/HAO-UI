@@ -1,0 +1,45 @@
+.animate-box .content {
+  position: fixed;
+  top: 70rpx;
+  right: 30rpx;
+  width: 120rpx;
+  line-height: 900rpx;
+  background-color: #ff9966;
+  text-align: center;
+}
+
+.animate-box .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  line-height: 120rpx;
+  background-color: #66ff99;
+  text-align: center;
+}
+
+.ball-container .ball {
+  position: fixed;
+  bottom: 74rpx;
+  left: 58rpx;
+  z-index: 200;
+  visibility: hidden;
+}
+
+.ball-container .ball-show {
+  visibility: visible;
+  transform: translate3d(0, 0, 0) !important;
+  transition: transform 0.4s cubic-bezier(0.49, -0.29, 0.75, 0.41);
+}
+
+.ball-container .ball .ball-inner {
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 50%;
+  background-color: #ff4247;
+}
+
+.ball-container .ball .ball-inner-show {
+  transform: translate3d(0, 0, 0) !important;
+  transition: transform 0.4s linear;
+}

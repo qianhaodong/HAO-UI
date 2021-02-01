@@ -1,0 +1,7 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index",
+    "custom-nav": "/components/custom-nav/index"
+  }
+}

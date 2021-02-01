@@ -1,0 +1,81 @@
+.list {
+  background-color: #f5f5f5;
+}
+
+/* 底部操作样式 -- start */
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 0 24rpx;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  transform: scaleY(0.5);
+}
+
+.operate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 110rpx;
+}
+
+.operate-all {
+  display: flex;
+  padding: 20rpx 0 20rpx 10rpx;
+  align-items: center;
+  font-size: 30rpx;
+  color: #666;
+  line-height: 48rpx;
+}
+
+.icon {
+  margin-right: 12rpx;
+  width: 16px;
+  height: 16px;
+}
+
+.operate-info {
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.operate-btn {
+  margin-left: 30rpx;
+  line-height: 54rpx;
+  font-size: 28rpx;
+  padding: 0 40rpx;
+  border-radius: 100rpx;
+  /* 默认按钮样式，可根据按钮类型自定义 */
+  background-color: #3b9cff;
+  border: 1rpx solid #3b9cff;
+  box-shadow: 0 4rpx 12rpx -4rpx #3b9cff;
+  color: #fff;
+}
+
+.operate-btn.cancel {
+  background-color: #fff;
+  border-color: #ddd;
+  box-shadow: 0 4rpx 12rpx -4rpx #eee;
+  color: #333;
+}
+
+.operate-hover {
+  transform: translate(1rpx, 1rpx);
+}
+
+/* 底部操作样式 -- end */

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "长列表",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index"
+  }
+}

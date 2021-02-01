@@ -1,0 +1,46 @@
+.drag-item {
+  position: absolute;
+  top: 0;
+  right:10rpx;
+  bottom: 20rpx;
+  left: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.drag-item .image {
+  width: 100%;
+  height: 100%;
+}
+
+.drag-item .img-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  font-size: 30rpx;
+  color: #ccc;
+}
+
+.drag-item .del {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38rpx;
+  height: 38rpx;
+  padding: 0 0 12rpx 12rpx;
+}
+
+.drag-item .del .del-icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 0 10rpx;
+}

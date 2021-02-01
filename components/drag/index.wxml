@@ -1,0 +1,25 @@
+<!-- <view style="overflow-x: {{overOnePage ? 'hidden' : 'initial'}}"> -->
+  <view class="drag-wrap drag-class" style="height: {{ dragWrapHeight }}px;">
+    <block wx:for="{{list}}" wx:key="index">
+      <view
+        id="index{{index}}"
+        class="item {{curZIndex == index ? 'zIndex' : ''}} {{item.fixed ? 'fixed' : ''}} {{itemTransition && curIndex != index ? 'transition' : ''}}"
+        style="width: {{100 / columns}}%; transform: translate3d({{curIndex == index ? tranX + 'px' : item.x * 100 + '%'}}, {{curIndex == index ? tranY + 'px' : item.y * 100 + '%'}}, 0);"
+        bind:longpress="handleLongpress"
+        catch:tap="handleItemClick"
+        catch:touchmove="{{dragging ? 'handleTouchmove' : ''}}"
+        catch:touchend="{{dragging ? 'handleTouchend' : ''}}"
+        data-index="{{index}}"
+        data-key="{{item.key}}"
+        data-fixed="{{item.fixed}}"
+      >
+        <view class="multiple" wx:if="{{columns > 2}}">
+          <slot name="{{'multiple' + index}}"></slot>
+        </view>
+        <view class="single" wx:else>
+          <slot name="{{'single' + index}}"></slot>
+        </view>
+      </view>
+    </block>
+  </view>
+<!-- </view> -->

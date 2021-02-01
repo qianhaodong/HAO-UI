@@ -1,0 +1,6 @@
+<multiple-list
+  multiple-list-class="multiple-list-class"
+  list="{{list}}"
+  radio-show="{{radioShow}}"
+  catch:handle-btn-click="handleBtnClick"
+></multiple-list>

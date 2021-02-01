@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "Action-Sheet",
+  "usingComponents": {
+    "page-tips": "/components/common/page-tips/index",
+    "action-sheet": "/components/action-sheet/index"
+  }
+}

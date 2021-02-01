@@ -1,0 +1,32 @@
+<block wx:if="{{list.length}}">
+  <multiple-list
+    custom
+    multiple-list-class="multiple-list-class"
+    list="{{list}}"
+    radio-show="{{radioShow}}"
+    operate-btns="{{operateBtns}}"
+    catch:handle-btn-click="handleBtnClick"
+  >
+    <block wx:for="{{list}}" wx:key="index">
+      <view
+        slot="{{'multiple-item' + index}}"
+        class="multiple-item"
+        bindlongpress="handleLongpress"
+        data-index="{{index}}"
+      >
+        <view class="name">{{item.name}}</view>
+        <view class="desc">{{item.desc}}</view>
+      </view>
+    </block>
+  </multiple-list>
+</block>
+<view wx:else class="no-result">暂无更多内容</view>
+
+<!-- 长按弹窗 -->
+<action-sheet
+  id="action-sheet"
+  show-cancel
+  border-radius
+  actions="{{ asActions }}"
+  catch:click="handleItemClick"
+></action-sheet>
