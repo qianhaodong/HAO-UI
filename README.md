@@ -4,6 +4,45 @@ HAO UI 是一款提供高质量交互的小程序组件合集，致力于简洁�
 
 
 
+## 体验
+
+使用微信扫一扫体验小程序组件示例
+
+[![小程序码](https://hdblog.online/wp-content/uploads/2021/01/code-12.jpg "小程序码")](https://hdblog.online/wp-content/uploads/2021/01/code-12.jpg "小程序码")
+
+
+
+## 快速上手
+
+### 使用之前
+
+在开始使用 HAO UI 之前，你需要先阅读[微信小程序自定义组件](https://developers.weixin.qq.com/miniprogram/dev/framework/custom-component/ "微信小程序自定义组件")的相关文档。
+
+### 如何使用
+
+首先下载代码到本地，按需引入组件。然后按照如下的方式使用组件，以 Dialog 组件为例，其它组件在对应的文档页查看：
+
+1.添加需要的组件。在页面的 json 中配置（路径根据自己项目位置配置）：
+```JSON
+"usingComponents": {
+    "dialog": "/components/dialog/index"
+}
+```
+
+2.在 wxml 中使用组件：
+```HTML
+<dialog
+	id="dialog"
+	action-btns="{{[{ type: confirm, txt: '我知道了' }]}}"
+></dialog>
+```
+
+
+
+## 版本说明
+
+
+
 ## 1.0.0版本
 
 发布时间：2020/11/04		作者：见走偏疯
