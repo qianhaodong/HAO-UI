@@ -86,10 +86,10 @@ Page({
             name: '商品购物车示例',
             page: '/pages/cart/cart'
           },
-          /* {
-            name: '倒计时',
-            page: '/pages/count-down/count-down'
-          } */
+          {
+            name: '手写签名',
+            page: '/pages/sign-canvas/index'
+          }
         ]
       }
     ]

@@ -1,43 +1,45 @@
 {
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "HAO UI",
-    "navigationBarTextStyle":"black"
-  },
-  "pages":[
-    "pages/index/index",
-    "pages/picker-date/picker-date",
-    "pages/action-sheet/action-sheet",
-    "pages/custom-nav/custom-nav",
-    "pages/dialog/dialog",
-    "pages/drop-menu/drop-menu",
-    "pages/multiple-list/multiple-list",
-    "pages/long-list/long-list",
-    "pages/upload-img/upload-img",
-    "pages/drag/drag",
-    "pages/drag-sort/drag-sort",
-    "pages/del-multiple-list/del-multiple-list",
-    "pages/ball-animation/ball-animation",
-    "pages/cart/cart",
-    "pages/count-down/count-down"
-  ],
-  "subPackages": [
-    {
-      "root": "cart-example",
-      "pages": [
-        "pages/index/index",
-        "pages/goods-detail/goods-detail"
-      ]
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "HAO UI",
+        "navigationBarTextStyle": "black"
     },
-    {
-      "root": "other-example",
-      "pages": [
-        "pages/sort-example/sort-example",
-        "pages/multiple-list-example/multiple-list-example",
-        "pages/del-multiple-example/del-multiple-example"
-      ]
-    }
-  ],
-  "sitemapLocation": "sitemap.json"
+    "pages": [
+        "pages/index/index",
+        "pages/picker-date/picker-date",
+        "pages/action-sheet/action-sheet",
+        "pages/custom-nav/custom-nav",
+        "pages/dialog/dialog",
+        "pages/drop-menu/drop-menu",
+        "pages/multiple-list/multiple-list",
+        "pages/long-list/long-list",
+        "pages/upload-img/upload-img",
+        "pages/drag/drag",
+        "pages/drag-sort/drag-sort",
+        "pages/del-multiple-list/del-multiple-list",
+        "pages/ball-animation/ball-animation",
+        "pages/cart/cart",
+        "pages/count-down/count-down",
+        "pages/sign-canvas/sign-canvas",
+        "pages/sign-canvas/index"
+    ],
+    "subPackages": [
+        {
+            "root": "cart-example",
+            "pages": [
+                "pages/index/index",
+                "pages/goods-detail/goods-detail"
+            ]
+        },
+        {
+            "root": "other-example",
+            "pages": [
+                "pages/sort-example/sort-example",
+                "pages/multiple-list-example/multiple-list-example",
+                "pages/del-multiple-example/del-multiple-example"
+            ]
+        }
+    ],
+    "sitemapLocation": "sitemap.json"
 }
